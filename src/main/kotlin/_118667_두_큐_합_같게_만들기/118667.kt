@@ -2,6 +2,13 @@ import java.lang.Integer.min
 
 class Solution {
     fun solution(queue1: IntArray, queue2: IntArray): Int {
+
+        /**
+         * - fold 함수 써보기
+         */
+
+        val a = Int.MAX_VALUE
+
         var answer = Int.MAX_VALUE
         val totalSize = queue1.size + queue2.size
         var totalValue = 0L

@@ -2,7 +2,7 @@ package `118666_성격_유형_검사하기`
 
 class Solution {
     fun solution(survey: Array<String>, choices: IntArray): String {
-        var answer: String = ""
+        val answer = java.lang.StringBuilder()
         val score = mutableMapOf<Char, Int>()
         "RTCFJMAN".forEach { score[it] = 0 }
 
@@ -14,11 +14,11 @@ class Solution {
             }
         }
 
-        answer += if (score['R']!! >= score['T']!!) "R" else "T"
-        answer += if(score['C']!! >= score['F']!!) "C" else "F"
-        answer += if (score['J']!! >= score['M']!!) "J" else "M"
-        answer += if (score['A']!! >= score['N']!!) "A" else "N"
+        answer.append(if (score['R']!! >= score['T']!!) "R" else "T")
+        answer.append(if(score['C']!! >= score['F']!!) "C" else "F")
+        answer.append(if (score['J']!! >= score['M']!!) "J" else "M")
+        answer.append(if (score['A']!! >= score['N']!!) "A" else "N")
 
-        return answer
+        return answer.toString()
     }
 }

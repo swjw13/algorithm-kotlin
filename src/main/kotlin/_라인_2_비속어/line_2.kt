@@ -2,13 +2,18 @@ package _라인_2_비속어
 
 class Solution {
     fun solution(k: Int, dic: List<String>, chat: String): String {
+
+        /**
+         * Queue, Stack 을 ArrayDeque 로 풀어보기
+         */
+
         val res = mutableListOf<String>()
         val wordList = chat.split(" ")
         for (word in wordList) {
             var regexString = ""
             for (char in word) {
                 if (char == '.') {
-                    regexString += "[a-z]{1,$k}"
+                    regexString += "[\\w]{1,$k}"
                 } else {
                     regexString += char
                 }
@@ -33,4 +38,9 @@ class Solution {
 
         return res.joinToString(" ")
     }
+}
+
+fun main(){
+    val reg = Regex(".")
+    println(reg.matches(" "))
 }
