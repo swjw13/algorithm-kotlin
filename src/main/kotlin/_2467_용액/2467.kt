@@ -33,9 +33,10 @@ fun main() {
         else endIdx -= 1
     }
 
-    writer.apply {
-        write("$minValue $maxValue\n")
-        flush()
-        close()
-    }
+//    writer.apply {
+//        write("$minValue $maxValue\n")
+//        flush()
+//        close()
+//    }
+    println("$minValue $maxValue\n")
 }
