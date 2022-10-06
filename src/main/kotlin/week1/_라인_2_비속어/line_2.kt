@@ -1,4 +1,4 @@
-package _라인_2_비속어
+package week1._라인_2_비속어
 
 class Solution {
     fun solution(k: Int, dic: List<String>, chat: String): String {

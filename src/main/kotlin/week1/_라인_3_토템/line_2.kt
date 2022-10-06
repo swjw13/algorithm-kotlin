@@ -1,4 +1,4 @@
-package _라인_3_토템
+package week1._라인_3_토템
 
 import java.lang.Integer.max
 import java.lang.Integer.min

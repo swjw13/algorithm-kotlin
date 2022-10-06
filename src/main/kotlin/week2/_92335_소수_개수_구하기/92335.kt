@@ -1,4 +1,4 @@
-package _92335_소수_개수_구하기
+package week2._92335_소수_개수_구하기
 
 import kotlin.math.sqrt
 

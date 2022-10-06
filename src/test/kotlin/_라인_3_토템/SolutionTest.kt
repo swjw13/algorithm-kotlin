@@ -4,6 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import org.junit.Before
+import week1._라인_3_토템.Solution
 
 class SolutionTest {
     private lateinit var solution: Solution

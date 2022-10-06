@@ -1,4 +1,4 @@
-package _2467_용액
+package week2._2467_용액
 
 import java.io.BufferedReader
 import java.io.BufferedWriter
