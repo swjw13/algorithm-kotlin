@@ -1,11 +1,11 @@
 import java.lang.Integer.min
 
+/**
+ * - fold 함수 써보기
+ */
+
 class Solution {
     fun solution(queue1: IntArray, queue2: IntArray): Int {
-
-        /**
-         * - fold 함수 써보기
-         */
 
         val a = Int.MAX_VALUE
 

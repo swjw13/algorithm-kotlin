@@ -4,6 +4,12 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.Collections.max
 
+/**
+ * lst.macOf()
+ * 매개 변수 탐색
+ * with(BufferedReader 사용하기)
+ */
+
 fun main() {
     var ans = 0
     val reader = BufferedReader(InputStreamReader(System.`in`))
@@ -11,12 +17,12 @@ fun main() {
     val (m, n) = reader.readLine().split(" ").map { it.toInt() }
     val lst = reader.readLine().split(" ").map { it.toInt() }
 
-    var min = 0
+    var min = 1
     var max = max(lst)
 
     while (min <= max) {
         val mid = (min + max) / 2
-        if (mid == 0) break
+
         var cnt = 0
         for (i in lst) cnt += (i / mid)
 

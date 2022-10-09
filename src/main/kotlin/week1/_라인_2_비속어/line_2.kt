@@ -1,11 +1,11 @@
 package week1._라인_2_비속어
 
+/**
+ * Queue, Stack 을 ArrayDeque 로 풀어보기
+ */
+
 class Solution {
     fun solution(k: Int, dic: List<String>, chat: String): String {
-
-        /**
-         * Queue, Stack 을 ArrayDeque 로 풀어보기
-         */
 
         val res = mutableListOf<String>()
         val wordList = chat.split(" ")

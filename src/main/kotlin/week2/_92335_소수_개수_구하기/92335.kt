@@ -2,6 +2,12 @@ package week2._92335_소수_개수_구하기
 
 import kotlin.math.sqrt
 
+
+/**
+ * str.toString(k) -> k 진법으로 변환
+ * Long 타입 준비하기
+ * (범위).none 함수 사용 해 보기
+ */
 class Solution {
 
     fun numberToString(n: Int, k: Int): String {

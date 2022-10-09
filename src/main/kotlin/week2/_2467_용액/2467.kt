@@ -8,7 +8,6 @@ import kotlin.math.abs
 
 fun main() {
     val reader = BufferedReader(InputStreamReader(System.`in`))
-    val writer = BufferedWriter(OutputStreamWriter(System.out))
 
     var minTotalValue = Int.MAX_VALUE
     var minValue = -1
@@ -33,10 +32,5 @@ fun main() {
         else endIdx -= 1
     }
 
-//    writer.apply {
-//        write("$minValue $maxValue\n")
-//        flush()
-//        close()
-//    }
     println("$minValue $maxValue\n")
 }
