@@ -1,7 +1,5 @@
 package week2._1406_에디터
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.util.LinkedList
 
 /**
@@ -11,37 +9,33 @@ import java.util.LinkedList
  */
 
 fun main() {
-    val reader = BufferedReader(InputStreamReader(System.`in`))
-    val words = reader.readLine().toList()
 
-    val a: LinkedList<String> = LinkedList()
-    words.forEach { a.add(it.toString()) }
+    with(System.`in`.bufferedReader()) {
+        val res = LinkedList<Char>()
+        readLine().forEach {
+            res.add(it)
+        }
 
-    val m = reader.readLine().toInt()
-    var curIdx = words.size
+        val iterator = res.listIterator()
 
-    for (i in 0 until m) {
-        val curAction = reader.readLine().split(" ")
-        if (curAction.size == 2) {
-            a.add(curIdx, curAction[1])
-            curIdx += 1
-        } else {
-            if (curAction[0] == "L") {
-                if (curIdx > 0) curIdx -= 1
-            } else if (curAction[0] == "D") {
-                if (curIdx <= a.size) curIdx += 1
-            } else if (curAction[0] == "B") {
-                if (curIdx > 0) {
-                    a.removeAt(curIdx - 1)
-                    curIdx -= 1
+        while(iterator.hasNext()){
+            iterator.next()
+        }
+
+        val n = readLine().toInt()
+        for (i in 0 until n) {
+            val curAction = readLine().split(" ")
+
+            when (curAction[0]){
+                "L" -> if (iterator.hasPrevious()) iterator.previous()
+                "D" -> if (iterator.hasNext()) iterator.next()
+                "B" -> if (iterator.hasPrevious()) {
+                    iterator.previous()
+                    iterator.remove()
                 }
+                else -> iterator.add(curAction[1][0])
             }
         }
+        println(res.toCharArray())
     }
-
-    val s = java.lang.StringBuilder()
-    a.forEach {
-        s.append(it)
-    }
-    println(s.toString())
 }
