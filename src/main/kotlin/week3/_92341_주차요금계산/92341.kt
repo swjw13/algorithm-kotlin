@@ -2,6 +2,11 @@ package week3._92341_주차요금계산
 
 import kotlin.math.ceil
 
+/**
+ * map.getOrDefault() 사용 해 보기
+ * sortedMap 의 일종인 TreeMap
+ */
+
 class Solution {
     private fun timeToInt(time: String): Int {
         val (hour, minute) = time.split(":").map { it.toInt() }
@@ -37,7 +42,7 @@ class Solution {
             if (it < fees[0]) {
                 answer.add(fees[1])
             } else {
-                answer.add(fees[1] + ceil((it - fees[0]).toFloat()/fees[2].toFloat()).toInt() * fees[3])
+                answer.add(fees[1] + ceil((it - fees[0])/fees[2].toFloat()).toInt() * fees[3])
             }
         }
 

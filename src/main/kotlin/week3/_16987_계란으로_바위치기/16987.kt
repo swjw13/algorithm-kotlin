@@ -13,6 +13,7 @@ import kotlin.math.max
 
 var res = 0
 
+
 fun main() {
 
     val weightMap = mutableMapOf<Int, Int>()
@@ -21,25 +22,34 @@ fun main() {
     fun brokenCount(): Int = lst.filter { it <= 0 }.size
 
     fun backtracking(idx: Int) {
+        /**
+         * Early Return 으로 가독성 챙기
+         */
+
         if (idx == lst.size) {
             res = max(res, brokenCount())
-        } else {
-            if (lst[idx] <= 0) {
+            return
+        }
+
+        if (lst[idx] <= 0) {
+            backtracking(idx + 1)
+            return
+        }
+
+        if (brokenCount() == lst.size - 1) {
+            res = max(res, lst.size - 1)
+            return
+        }
+
+        for (i in 0 until lst.size) {
+            if (i != idx && lst[i] > 0) {
+                lst[idx] -= weightMap[i]!!
+                lst[i] -= weightMap[idx]!!
+
                 backtracking(idx + 1)
-            } else if (brokenCount() == lst.size - 1) {
-                res = max(res, lst.size - 1)
-            } else {
-                for (i in 0 until lst.size) {
-                    if (i != idx && lst[i] > 0) {
-                        lst[idx] -= weightMap[i]!!
-                        lst[i] -= weightMap[idx]!!
 
-                        backtracking(idx + 1)
-
-                        lst[idx] += weightMap[i]!!
-                        lst[i] += weightMap[idx]!!
-                    }
-                }
+                lst[idx] += weightMap[i]!!
+                lst[i] += weightMap[idx]!!
             }
         }
     }
