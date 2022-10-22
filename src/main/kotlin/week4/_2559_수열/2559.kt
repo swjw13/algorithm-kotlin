@@ -1,5 +1,9 @@
 package week4._2559_수열
 
+/**
+ * StreamTokenizer 찾아보기
+ */
+
 fun main() {
     with(System.`in`.bufferedReader()) {
         val (n, k) = readLine().split(" ").map { it.toInt() }

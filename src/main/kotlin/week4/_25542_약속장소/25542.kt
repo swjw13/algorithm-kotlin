@@ -1,5 +1,10 @@
 package week4._25542_약속장소
 
+/**
+ * exitProcess : 프로세스 종료
+ * LineReader
+ */
+
 fun main() {
     val wholeWords = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -32,10 +37,12 @@ fun main() {
             val wordSet = findAvailableDest(word)
             answerSet = answerSet.intersect(wordSet).toMutableSet()
 
-            if (answerSet.size == 0) break
+            if (answerSet.isEmpty()) break
         }
 
-        if (answerSet.size == 0) {
+        mutableListOf<String>().removeLast()
+
+        if (answerSet.isEmpty()) {
             println("CALL FRIEND")
         } else {
             println(answerSet.random())

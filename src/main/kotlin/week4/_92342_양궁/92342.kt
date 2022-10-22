@@ -1,5 +1,9 @@
 package week4._92342_양궁
 
+/**
+ * list.clone 으로 값 복사하기
+ */
+
 class Solution {
 
     fun solution(n: Int, info: IntArray): IntArray {
@@ -16,29 +20,18 @@ class Solution {
                 .filter { res[it] + info[it] != 0 && res[it] <= info[it] }
                 .sumOf { 10 - it }
 
-            val curResult = myCount - yourCount
-            if (curResult >= totalCount){
-                val isBig = curResult > totalCount
-                totalCount = curResult
-                if (isBig || answer.compare(res)){
+            if ((myCount - yourCount) > totalCount) {
+                totalCount = myCount - yourCount
+                for (i in answer.indices) {
+                    answer[i] = res[i]
+                }
+            } else if (myCount - yourCount == totalCount) {
+                if (answer.compare(res)) {
                     for (i in answer.indices) {
                         answer[i] = res[i]
                     }
                 }
             }
-
-//            if ((myCount - yourCount) > totalCount) {
-//                totalCount = myCount - yourCount
-//                for (i in answer.indices) {
-//                    answer[i] = res[i]
-//                }
-//            } else if (myCount - yourCount == totalCount) {
-//                if (answer.compare(res)) {
-//                    for (i in answer.indices) {
-//                        answer[i] = res[i]
-//                    }
-//                }
-//            }
         }
 
         fun backTracking(curIdx: Int, remain: Int) {
