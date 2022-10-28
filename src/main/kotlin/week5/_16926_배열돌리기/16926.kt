@@ -4,6 +4,9 @@ fun main() {
 
     fun rotate(lst: List<MutableList<Int>>, startRow: Int, startCol: Int, rowSize: Int, colSize: Int, rotateSize: Int) {
         val deque = ArrayDeque<Int>()
+
+        readln()
+
         for (i in startCol until startCol + colSize){
             deque.add(lst[startRow][i])
         }

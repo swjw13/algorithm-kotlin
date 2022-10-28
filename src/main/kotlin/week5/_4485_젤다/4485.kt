@@ -2,13 +2,17 @@ package week5._4485_젤다
 
 import java.util.PriorityQueue
 
+/**
+ * comparable 함수에 compareTo 사용하기
+ */
+
 fun main() {
 
     val dxy = listOf(Pair(-1, 0), Pair(1, 0), Pair(0, -1), Pair(0, 1))
 
     fun bfs(lst: List<List<Int>>, n: Int): Int {
         val heap: PriorityQueue<Triple<Int, Int, Int>> = PriorityQueue { p1, p2 ->
-            p1.first - p2.first
+            p1.first.compareTo(p2.first)
         }
 
         val dist = List(n) { MutableList(n) { Int.MAX_VALUE } }

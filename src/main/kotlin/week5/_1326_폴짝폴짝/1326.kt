@@ -1,5 +1,8 @@
 package week5._1326_폴짝폴짝
 
+import java.util.LinkedList
+import java.util.Queue
+
 fun main() {
 
     val n = readln().toInt()

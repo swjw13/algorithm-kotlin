@@ -12,12 +12,12 @@ fun main() {
 
     val dxdy = listOf(Pair(-1, 0), Pair(1, 0), Pair(0, -1), Pair(0, 1))
     fun bfs(row: Int, col: Int, board: List<MutableList<Int>>) {
-        val queue: Queue<Point> = LinkedList()
+        val queue = ArrayDeque<Point>()
         queue.add(Point(row, col))
         board[row][col] = 0
 
         while (queue.isNotEmpty()) {
-            val curPoint = queue.poll()
+            val curPoint = queue.removeFirst()
             for (movement in dxdy) {
                 val newRow = curPoint.row + movement.first
                 val newCol = curPoint.col + movement.second
