@@ -1,5 +1,9 @@
 package week6._1541_괄호
 
+/**
+ * reduce, sumOf 사용하기
+ */
+
 fun eval(expr: String): Int {
     val numberRegex = Regex("[0-9]+")
     val opRegex = Regex("[+-]")

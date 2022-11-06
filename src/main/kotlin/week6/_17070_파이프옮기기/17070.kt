@@ -5,6 +5,7 @@ import java.io.OutputStreamWriter
 
 /**
  * DP 사용
+ * -> Top-Down 방식 사용해보기
  */
 
 enum class Direction(val number: Int) {
@@ -18,10 +19,9 @@ data class Point(
 )
 
 fun bfs(board: MutableList<MutableList<Int>>, size: Int): Int {
-    var res = 0
-
     val queue = ArrayDeque<Point>()
     queue.add(Point(0, 1, Direction.Horizontal))
+    val a = queue.removeFirst()
 
     val visited = List(size) { MutableList(size) { MutableList(3) { 0 } } }
     visited[0][1][Direction.Horizontal.number] = 1
