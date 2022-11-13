@@ -1,5 +1,9 @@
 package week7._1946_신입사원
 
+/**
+ * (char -> Int) : digitToInt()
+ */
+
 data class Score(
     val first: Int,
     val second: Int
