@@ -1,4 +1,4 @@
-package week10._10026_적록색약._1041_주사위
+package week10._1041_주사위
 
 import java.util.Collections.max
 import java.util.Collections.min
