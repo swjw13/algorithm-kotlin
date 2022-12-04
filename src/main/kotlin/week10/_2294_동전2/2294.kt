@@ -11,6 +11,7 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     coins.forEach {
         if (it < k + 1) dp[it] = 1
+
         for (i in 1..k - it) {
             if (dp[i] != Int.MAX_VALUE) {
                 dp[i + it] = minOf(dp[i] + 1, dp[i + it])

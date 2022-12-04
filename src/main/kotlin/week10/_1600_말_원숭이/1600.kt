@@ -4,7 +4,16 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     val defaultMovement = listOf(listOf(-1, 0), listOf(1, 0), listOf(0, -1), listOf(0, 1))
     val horseMovement =
-        listOf(listOf(-2, 1), listOf(-2, 1), listOf(-1, 2), listOf(-1, -2), listOf(1, 2), listOf(1, -2), listOf(2, -1), listOf(2, 1))
+        listOf(
+            listOf(-2, 1),
+            listOf(-2, 1),
+            listOf(-1, 2),
+            listOf(-1, -2),
+            listOf(1, 2),
+            listOf(1, -2),
+            listOf(2, -1),
+            listOf(2, 1)
+        )
 
     val k = readln().toInt()
     val (w, h) = readln().split(" ").map { it.toInt() }
@@ -15,7 +24,6 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
 
     val visited = List(k + 1) { List(h) { MutableList(w) { false } } }
-
 
     val queue = ArrayDeque<List<Int>>()
     queue.add(listOf(0, 0, k, 0))

@@ -1,5 +1,7 @@
 package week10._10026_적록색약
 
+// Array(N) {readln().toCharArray()}
+
 fun main() = with(System.`in`.bufferedReader()) {
 
     val dxdy = listOf(Pair(-1, 0), Pair(1, 0), Pair(0, 1), Pair(0, -1))
@@ -48,7 +50,7 @@ fun main() = with(System.`in`.bufferedReader()) {
     var ans2 = 0
     for (row in 0 until n) {
         for (col in 0 until n) {
-            if (boardForRGError[row][col] in "RG") {
+            if (boardForRGError[row][col].toString() in "RG") {
                 bfs(boardForRGError, row, col, "RG")
                 ans2 += 1
                 continue

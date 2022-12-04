@@ -10,7 +10,7 @@ fun main() = with(System.`in`.bufferedReader()) {
     val n = readln().toLong()
     val lst = readln().trim().split(" ").map { it.toLong() }
 
-    if (n == 1L){
+    if (n == 1L) {
         println(lst.sum() - max(lst))
         return@with
     }
@@ -30,12 +30,12 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     val threeSidePair = lst.triple()
     var minForThreeSide = Long.MAX_VALUE
-    threeSidePair.forEach{
+    threeSidePair.forEach {
         if (
             Pair(it.first, it.second) !in twoSideUnable
             && Pair(it.first, it.third) !in twoSideUnable
             && Pair(it.second, it.third) !in twoSideUnable
-        ){
+        ) {
             minForThreeSide = minOf(minForThreeSide, lst[it.first] + lst[it.second] + lst[it.third])
         }
     }
@@ -54,11 +54,11 @@ fun <T> List<T>.double(): List<Pair<Int, Int>> {
     return res.toList()
 }
 
-fun <T> List<T>.triple(): List<Triple<Int, Int, Int>>{
+fun <T> List<T>.triple(): List<Triple<Int, Int, Int>> {
     val res = mutableListOf<Triple<Int, Int, Int>>()
-    for (i in this.indices){
-        for (j in i + 1 until this.size){
-            for (k in j + 1 until this.size){
+    for (i in this.indices) {
+        for (j in i + 1 until this.size) {
+            for (k in j + 1 until this.size) {
                 res.add(Triple(i, j, k))
             }
         }
