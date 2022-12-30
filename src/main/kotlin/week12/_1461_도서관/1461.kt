@@ -13,7 +13,7 @@ fun main() = with(System.`in`.bufferedReader()) {
         }
     }.toMutableList()
 
-    var destinationPoint = 0
+    var destinationPoint: Int
     val prevDest = mutableListOf<Int>()
 
     while (lst.isNotEmpty()){
