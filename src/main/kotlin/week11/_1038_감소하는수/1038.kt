@@ -1,5 +1,6 @@
 package week11._1038_감소하는수
 
+// Char.digitToInt()
 fun main() = with(System.`in`.bufferedReader()) {
     val decreaseNumbers = mutableListOf<Long>()
 

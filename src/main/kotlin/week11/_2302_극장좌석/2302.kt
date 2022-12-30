@@ -15,6 +15,7 @@ fun main() = with(System.`in`.bufferedReader()) {
         vipNumbers.add(readln().toInt())
     }
 
+    // VIP 숫자는 좌석의 위치와 같기 때문에 숫자로만 판별을 해도 될 것 같다.
     var cnt = 0
     for (i in 1..n) {
         if (i in vipNumbers) {

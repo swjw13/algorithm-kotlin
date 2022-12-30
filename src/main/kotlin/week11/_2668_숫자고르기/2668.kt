@@ -10,6 +10,14 @@ fun main() = with(System.`in`.bufferedReader()) {
         edgeMap[i] = connected
     }
 
+    // 주어진 행렬
+    // 1   3   4   5
+    // 3   4   5   3
+
+    // 탐색 하면서 count 를 저장하여서 갯수를 탐색
+    // 1  3  4  5
+    // 1  2  3  4
+
     val visited = MutableList(n + 1) { false }
     for (i in 1..n) {
         if (visited[i].not()){
