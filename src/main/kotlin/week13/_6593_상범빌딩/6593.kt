@@ -4,9 +4,7 @@ data class Point(
     val floor: Int,
     val row: Int,
     val column: Int
-) {
-    fun match(otherPoint: Point): Boolean = (floor == otherPoint.floor && row == otherPoint.row && column == otherPoint.column)
-}
+)
 
 data class QueueElement(
     val point: Point,
@@ -60,12 +58,12 @@ fun main() = with(System.`in`.bufferedReader()) {
 
         while (queue.isNotEmpty()) {
             val curElement = queue.removeFirst()
-            if (curElement.point.match(endPoint)) {
+            if (curElement.point.equals(endPoint)) {
                 isEscapable = curElement.dist
                 break
             }
 
-            for (movement in movementList){
+            for (movement in movementList) {
                 val newFloor = curElement.point.floor + movement.floor
                 val newRow = curElement.point.row + movement.row
                 val newCol = curElement.point.column + movement.column
