@@ -1,11 +1,13 @@
 package week16._2617_구슬찾기
 
+const val INF = 100000
 fun main() = with(System.`in`.bufferedReader()) {
     val (n, m) = readln().split(" ").map { it.toInt() }
-    val biggerDst = List(n + 1) { MutableList(n + 1) { 100000 } }.apply {
+
+    val biggerDst = List(n + 1) { MutableList(n + 1) { INF } }.apply {
         for (i in 1..n) this[i][i] = 0
     }
-    val smallerDst = List(n + 1) { MutableList(n + 1) { 100000 } }.apply {
+    val smallerDst = List(n + 1) { MutableList(n + 1) { INF } }.apply {
         for (i in 1..n) this[i][i] = 0
     }
 
@@ -29,13 +31,13 @@ fun main() = with(System.`in`.bufferedReader()) {
     for (i in 1..n) {
         cnt = 0
         for (j in 1..n) {
-            if (biggerDst[i][j] != 100000 && biggerDst[i][j] != 0) cnt += 1
+            if (biggerDst[i][j] != INF && biggerDst[i][j] != 0) cnt += 1
         }
         if (cnt > n / 2) res.add(i)
 
         cnt = 0
         for (j in 1..n) {
-            if (smallerDst[i][j] != 100000 && smallerDst[i][j] != 0) cnt += 1
+            if (smallerDst[i][j] != INF && smallerDst[i][j] != 0) cnt += 1
         }
         if (cnt > n / 2) res.add(i)
     }
