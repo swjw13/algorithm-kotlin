@@ -14,7 +14,7 @@ enum class Glass {
     A, B, C
 }
 
-object Solution2251 {
+private object Solution2251 {
     fun solution() = with(System.`in`.bufferedReader()) {
         val res = mutableSetOf<Int>()
         val (a, b, c) = readln().split(" ").map { it.toInt() }

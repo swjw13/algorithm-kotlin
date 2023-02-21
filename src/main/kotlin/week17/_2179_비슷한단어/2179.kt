@@ -3,7 +3,7 @@ package week17._2179_비슷한단어
 /**
  * 정답 후보군을 Set으로 묶고 그 중에서 idx가 가장 앞인 값을 추출해 보자.
  */
-class Solution2179 {
+private class Solution2179 {
     fun solution() = with(System.`in`.bufferedReader()) {
         val n = readln().toInt()
         val words = mutableListOf<String>()

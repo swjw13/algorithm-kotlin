@@ -3,7 +3,7 @@ package week17._1043_거짓말
 /**
  * 분리 집합 -> union - find
  */
-class Solution1043 {
+private class Solution1043 {
     fun solution() = with(System.`in`.bufferedReader()) {
         val (n, m) = readln().split(" ").map { it.toInt() }
         val people = readln().split(" ").map { it.toInt() }

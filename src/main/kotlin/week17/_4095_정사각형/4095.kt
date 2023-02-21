@@ -1,6 +1,6 @@
 package week17._4095_정사각형
 
-object Solution4095 {
+private object Solution4095 {
     private lateinit var board: MutableList<List<Int>>
     fun solution() = with(System.`in`.bufferedReader()) {
         while (true) {
