@@ -9,8 +9,8 @@ private class Solution14725 {
     ) {
         fun insert(elements: List<String>) {
             var tree = this
-            for (element in elements){
-                if (element in tree.node.keys){
+            for (element in elements) {
+                if (element in tree.node.keys) {
                     tree = tree.node[element]!!
                 } else {
                     tree.node[element] = Trie(TreeMap())
@@ -20,7 +20,7 @@ private class Solution14725 {
         }
     }
 
-    private fun show(prefix: String, trie: Trie){
+    private fun show(prefix: String, trie: Trie) {
         if (trie.node.keys.size != 0) {
             for (key in trie.node.keys) {
                 println("$prefix$key")
@@ -33,7 +33,7 @@ private class Solution14725 {
         val n = readln().toInt()
         val trie = Trie(TreeMap())
 
-        for (i in 0 until n){
+        for (i in 0 until n) {
             val line = readln().split(" ")
             trie.insert(line.subList(1, 1 + line[0].toInt()))
         }

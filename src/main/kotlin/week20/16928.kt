@@ -29,7 +29,7 @@ private class Solution16928 {
         }
         while (queue.isNotEmpty()) {
             val curPoint = queue.removeFirst()
-            if(curPoint.point == 100){
+            if (curPoint.point == 100) {
                 println(curPoint.turn)
                 return@with
             }

@@ -2,12 +2,10 @@ package week20
 
 private class Solution1034 {
 
-    private val board = mutableListOf<MutableList<Int>>()
-
     fun solution() = with(System.`in`.bufferedReader()){
         var res = 0
 
-        val (n, m) = readln().split(" ").map { it.toInt() }
+        val (n, _) = readln().split(" ").map { it.toInt() }
         val rowMap = mutableMapOf<String, Int>()
 
         for (i in 0 until n){
