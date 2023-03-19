@@ -4,10 +4,20 @@ private class Solution17140 {
 
     fun sorting(list: List<Int>): List<Int> {
         val res = mutableListOf<Int>()
+
+
         list.filter { it != 0 }
+
+            /**
+             * groupingBy().eachCount() 사용
+             */
+
             .groupBy { it }
             .entries
             .sortedWith(compareBy({ it.value.size }, { it.key }))
+//            .flatMap {
+//                listOf(it.key, it.value)
+//            }
             .forEach {
                 res.add(it.key)
                 res.add(it.value.size)
@@ -20,6 +30,10 @@ private class Solution17140 {
         val res = lst.map { sorting(it).toMutableList() }
 
         maxLength = res.maxOf { it.size }
+
+        /**
+         * fill 함수 사용
+         */
         for (idx in res.indices) {
             while (res[idx].size != maxLength) res[idx].add(0)
         }
@@ -64,7 +78,6 @@ private class Solution17140 {
         var turn = 0
 
         while ((r - 1 >= rowSize || c - 1 >= colSize) || (board[r - 1][c - 1] != k)) {
-
             if (turn == 100) {
                 return@with -1
             }

@@ -4,6 +4,10 @@ import kotlin.math.pow
 
 private class Solution1062 {
     val alphaList = "bdefghjklmopqrsuvwxyz".toList()
+
+    /**
+     * 2**22 = 약 400만
+     */
     val maxMask = 2.0.pow(22.0).toInt() - 1
 
     fun countOne(num: Int): Int {
@@ -42,7 +46,7 @@ private class Solution1062 {
         var res = 0
         for (i in 1..maxMask) {
             if (countOne(i) == k - 5) {
-                res = maxOf(res, bitMaskList.filter { it and i == it }.size)
+                res = maxOf(res, bitMaskList.count { it and i == it })
             }
         }
         println(res)
