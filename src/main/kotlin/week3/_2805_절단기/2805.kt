@@ -2,7 +2,7 @@ package week3._2805_절단기
 
 import kotlin.math.max
 
-tailrec fun factorial(n: Int): Int {
+private tailrec fun factorial(n: Int): Int {
     return factorial(n - 2)
 }
 

@@ -4,7 +4,7 @@ import java.util.PriorityQueue
 import kotlin.math.max
 import kotlin.math.min
 
-class Solution2461 {
+private class Solution2461 {
 
     data class HeapElement(
         val value: Int,

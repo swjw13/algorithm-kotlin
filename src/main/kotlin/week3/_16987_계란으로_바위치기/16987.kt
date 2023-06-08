@@ -11,7 +11,7 @@ import kotlin.math.max
  *  - 경우의 수를 좀 더 자세히 살표 볼 필요가 있음(처음에는 lst[i] > 0 인 조건을 넣지 않음)
  */
 
-var res = 0
+private var res = 0
 
 
 fun main() {

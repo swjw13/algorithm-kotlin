@@ -8,7 +8,7 @@ import kotlin.math.sqrt
  * Long 타입 준비하기
  * (범위).none 함수 사용 해 보기
  */
-class Solution {
+private class Solution {
 
     fun numberToString(n: Int, k: Int): String {
         var number = n

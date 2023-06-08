@@ -1,6 +1,6 @@
 package `118666_성격_유형_검사하기`
 
-class Solution {
+private class Solution {
     fun solution(survey: Array<String>, choices: IntArray): String {
         val answer = java.lang.StringBuilder()
         val score = mutableMapOf<Char, Int>()

@@ -1,5 +1,8 @@
 package week23
 
+/**
+ * copyInto()...?
+ */
 private class Solution17144 {
 
     data class Point(

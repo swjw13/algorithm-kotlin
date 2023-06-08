@@ -7,7 +7,7 @@ import kotlin.math.ceil
  * sortedMap 의 일종인 TreeMap
  */
 
-class Solution {
+private class Solution {
     private fun timeToInt(time: String): Int {
         val (hour, minute) = time.split(":").map { it.toInt() }
         return hour * 60 + minute

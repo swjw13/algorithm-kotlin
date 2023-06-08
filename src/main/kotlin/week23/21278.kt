@@ -2,11 +2,6 @@ package week23
 
 private class Solution21278 {
 
-    data class HeapElement(
-        val point: Int,
-        val dist: Int
-    )
-
     private fun floyd(line: List<List<Int>>, n: Int): List<List<Int>> {
         val distance = List(n + 1) { MutableList(n + 1) { 1000 } }
         for (i in 1..n) {
