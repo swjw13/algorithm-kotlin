@@ -23,7 +23,7 @@ private class Solution1493 {
         return if (minimumLength == -1) {
             -1
         } else {
-            val l = 2.0.pow(minimumLength.toDouble()).toInt()
+            val l = 2.0.pow(minimumLength.toDouble()).toInt() // shl 사용하기
             cubeCount[minimumLength] -= 1
             val first = divide(r - l, l, h)
             val second = divide(l, c, h - l)
