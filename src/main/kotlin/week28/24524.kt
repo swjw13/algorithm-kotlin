@@ -17,7 +17,6 @@ private class Solution24524 {
             visited[it.code - 'a'.code] = true
         }
 
-
         s.forEachIndexed { index, c ->
             if (visited[c.code - 'a'.code]) {
                 positionMap[c]?.add(index)
