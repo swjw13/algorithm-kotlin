@@ -25,11 +25,11 @@ private class Solution24524 {
 
         var cnt = 0
         var idx: Int
-        loop@ while(true){
+        loop@ while (true) {
             idx = 0
-            for (c in t){
+            for (c in t) {
                 val curMap = positionMap[c]!!
-                while(curMap.isNotEmpty() && curMap.first() < idx){
+                while (curMap.isNotEmpty() && curMap.first() < idx) {
                     positionMap[c]!!.removeFirst()
                 }
 

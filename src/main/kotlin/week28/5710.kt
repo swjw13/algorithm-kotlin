@@ -27,24 +27,24 @@ private class Solution5710 {
 
             var start: Long = 0
             var end = totalUsage
-            while (start <= end){
+            while (start <= end) {
                 val mid: Long = (start + end) / 2
 
                 val resultOne = getPrice(mid)
                 val resultTwo = getPrice(totalUsage - mid)
 
                 val result = abs(resultOne - resultTwo)
-                if (result == b){
+                if (result == b) {
                     println(minOf(resultOne, resultTwo))
                     break
-                } else if (result < b){
-                    if (mid <= totalUsage / 2){
+                } else if (result < b) {
+                    if (mid <= totalUsage / 2) {
                         end = mid - 1
                     } else {
                         start = mid + 1
                     }
                 } else {
-                    if (mid > totalUsage / 2){
+                    if (mid > totalUsage / 2) {
                         end = mid - 1
                     } else {
                         start = mid + 1

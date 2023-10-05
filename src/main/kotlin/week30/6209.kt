@@ -7,11 +7,11 @@ private class Solution6209 {
 
         var low = 0
         var high = this.size - 1
-        while (low <= high){
+        while (low <= high) {
             val mid = (low + high) / 2
-            if (value < this[mid]){
+            if (value < this[mid]) {
                 high = mid - 1
-            } else if (value == this[mid]){
+            } else if (value == this[mid]) {
                 return mid
             } else {
                 low = mid + 1
@@ -22,7 +22,7 @@ private class Solution6209 {
 
     fun solution() = with(System.`in`.bufferedReader()) {
         val (d, n, m) = readln().split(" ").map { it.toInt() }
-        if (n == 0){
+        if (n == 0) {
             println(d)
             return@with
         }
@@ -43,7 +43,7 @@ private class Solution6209 {
             var curPoint = 0
             while (true) {
                 val nextIdx = tmp.binSearch(curPoint + mid)
-                if (nextIdx == n){
+                if (nextIdx == n) {
                     break
                 } else {
                     cnt += 1
@@ -51,7 +51,7 @@ private class Solution6209 {
                 }
             }
 
-            if (cnt < n - m){
+            if (cnt < n - m) {
                 high = mid - 1
             } else {
                 low = mid + 1

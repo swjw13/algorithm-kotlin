@@ -50,7 +50,7 @@ private class Solution16936 {
             visited.removeLast()
         }
 
-        println(visited.joinToString(" "){
+        println(visited.joinToString(" ") {
             lst[it].toString()
         })
     }

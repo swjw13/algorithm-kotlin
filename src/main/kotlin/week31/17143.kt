@@ -40,9 +40,13 @@ private class Solution17143 {
                     DIR_VERTICAL
                 }
 
-                2 -> { DIR_VERTICAL }
+                2 -> {
+                    DIR_VERTICAL
+                }
 
-                3 -> { DIR_HORIZONTAL }
+                3 -> {
+                    DIR_HORIZONTAL
+                }
 
                 4 -> {
                     curC += 2 * (colTmp - curC)

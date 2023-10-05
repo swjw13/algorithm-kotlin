@@ -12,8 +12,7 @@ private class Solution1865 {
                 if (board[e1][e2] == 0) {
                     board[e1][e2] = d
                     board[e2][e1] = d
-                }
-                else {
+                } else {
                     board[e1][e2] = minOf(board[e1][e2], d)
                     board[e2][e1] = minOf(board[e2][e1], d)
                 }

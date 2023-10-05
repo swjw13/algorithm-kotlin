@@ -4,7 +4,7 @@ import java.util.*
 
 
 private class Solution1633 {
-    fun solution(){
+    fun solution() {
         val lst = mutableListOf<List<Int>>()
         var cnt = 0
 
@@ -23,16 +23,16 @@ private class Solution1633 {
         dp[0][14][15] = lst[0][0]
         dp[0][15][14] = lst[0][1]
 
-        for (i in 0 until cnt - 1){
-            for (j in 15 downTo 0){
-                for (k in 15 downTo 0){
-                    if (dp[i][j][k] >= 0){
+        for (i in 0 until cnt - 1) {
+            for (j in 15 downTo 0) {
+                for (k in 15 downTo 0) {
+                    if (dp[i][j][k] >= 0) {
                         dp[i + 1][j][k] = maxOf(dp[i + 1][j][k], dp[i][j][k])
 
-                        if (j - 1 >= 0){
+                        if (j - 1 >= 0) {
                             dp[i + 1][j - 1][k] = maxOf(dp[i + 1][j - 1][k], dp[i][j][k] + lst[i + 1][0])
                         }
-                        if (k - 1 >= 0){
+                        if (k - 1 >= 0) {
                             dp[i + 1][j][k - 1] = maxOf(dp[i + 1][j][k - 1], dp[i][j][k] + lst[i + 1][1])
                         }
                     }
@@ -45,6 +45,6 @@ private class Solution1633 {
     }
 }
 
-fun main(){
+fun main() {
     Solution1633().solution()
 }

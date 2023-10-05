@@ -7,8 +7,8 @@ private class Solution12784 {
 
     fun dfs(curPoint: Int, maxPoint: Int): Int {
         var tmp = 0
-        for (i in 1 .. maxPoint){
-            if (!visited[i] && dynamite[curPoint][i] != 0){
+        for (i in 1..maxPoint) {
+            if (!visited[i] && dynamite[curPoint][i] != 0) {
                 visited[i] = true
                 val result = dfs(i, maxPoint)
                 tmp += if (result == 0) dynamite[curPoint][i] else minOf(result, dynamite[curPoint][i])
@@ -35,11 +35,11 @@ private class Solution12784 {
 
             visited[1] = true
             var res = 0
-            for (i in 1 .. n){
-                if (!visited[i] && dynamite[1][i] != 0){
+            for (i in 1..n) {
+                if (!visited[i] && dynamite[1][i] != 0) {
                     visited[i] = true
                     val result = dfs(i, n)
-                    res += if(result == 0) dynamite[1][i] else minOf(result, dynamite[1][i])
+                    res += if (result == 0) dynamite[1][i] else minOf(result, dynamite[1][i])
                 }
             }
             println(res)

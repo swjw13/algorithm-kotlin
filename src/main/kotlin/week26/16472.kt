@@ -20,19 +20,19 @@ private class Solution16472 {
         var totalLength = 1
 
         while (endIdx < word.length) {
-            if (wordCnt <= n){
+            if (wordCnt <= n) {
                 result = maxOf(result, totalLength)
 
                 endIdx += 1
                 if (endIdx >= word.length) continue
 
-                if(countMap[word[endIdx]] == 0) wordCnt += 1
+                if (countMap[word[endIdx]] == 0) wordCnt += 1
                 totalLength += 1
                 countMap[word[endIdx]] = countMap[word[endIdx]]!! + 1
 
             } else {
                 countMap[word[frontIdx]] = countMap[word[frontIdx]]!! - 1
-                if (countMap[word[frontIdx]] == 0 ) wordCnt -= 1
+                if (countMap[word[frontIdx]] == 0) wordCnt -= 1
                 totalLength -= 1
                 frontIdx += 1
             }

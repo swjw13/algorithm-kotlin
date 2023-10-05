@@ -33,17 +33,17 @@ private class Solution19538 {
 
             for (v in visitingQueue) {
                 var cnt = 0
-                for (c in connected[v]){
+                for (c in connected[v]) {
                     if (c == 0) break
                     if (visited[c] != -1) cnt += 1
                 }
 
-                if (cnt >= connected[v].size / 2){
+                if (cnt >= connected[v].size / 2) {
                     tempList.add(v)
                 }
             }
 
-            for (v in tempList){
+            for (v in tempList) {
                 visited[v] = curTurn + 1
                 queue.add(v)
             }

@@ -13,13 +13,13 @@ private class Solution2629 {
         dp[0][maxSize] = true
 
         for (row in 0 until ballSize) {
-            for (col in 1 .. maxSize){
-                if(dp[row][col]){
+            for (col in 1..maxSize) {
+                if (dp[row][col]) {
                     dp[row + 1][col] = true
-                    if (col - balls[row] >= 1){
+                    if (col - balls[row] >= 1) {
                         dp[row + 1][col - balls[row]] = true
                     }
-                    if (col - balls[row] * 2 >= 1){
+                    if (col - balls[row] * 2 >= 1) {
                         dp[row + 1][col - balls[row] * 2] = true
                     }
                 }
@@ -27,8 +27,8 @@ private class Solution2629 {
         }
 
         val result = mutableListOf<String>()
-        for(i in tests){
-            if(i <= maxSize && dp.last()[i]) result.add("Y")
+        for (i in tests) {
+            if (i <= maxSize && dp.last()[i]) result.add("Y")
             else result.add("N")
         }
         println(result.joinToString(" "))

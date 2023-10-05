@@ -13,7 +13,7 @@ private class Solution9466 {
         } else {
             team[curPoint] = curPoint
             val nextTeam = dfs(lst[curPoint - 1], lst, team)
-            if (nextTeam == -1){
+            if (nextTeam == -1) {
                 team[curPoint] = 0
                 -1
             } else {
@@ -28,7 +28,7 @@ private class Solution9466 {
     fun solution() {
         val br = BufferedReader(InputStreamReader(System.`in`))
         val bw = BufferedWriter(OutputStreamWriter(System.out))
-        
+
         val t = br.readLine().toInt()
         for (i in 0 until t) {
             val n = br.readLine().toInt()
@@ -36,7 +36,7 @@ private class Solution9466 {
             var cnt = 0
             val lst = br.readLine().split(" ").map { it.toInt() }
             val team = MutableList(n + 1) { 0 }
-            for (j in 1 .. n){
+            for (j in 1..n) {
                 if (lst[j - 1] == j) team[j] = -1
             }
 
@@ -46,7 +46,7 @@ private class Solution9466 {
                 }
             }
 
-            for (j in 1 until team.size){
+            for (j in 1 until team.size) {
                 if (team[j] == 0) cnt += 1
             }
             bw.write("$cnt\n")

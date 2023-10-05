@@ -38,13 +38,16 @@ private class Solution2310 {
                 val curCoin = curPoint.remainCoin
                 val curRoom = curPoint.roomNo
 
-                val remainCoin = if (roomStyle[curRoom] == "E") curCoin else if (roomStyle[curRoom] == "L") maxOf(coin[curRoom], curCoin) else curCoin - coin[curRoom]
+                val remainCoin = if (roomStyle[curRoom] == "E") curCoin else if (roomStyle[curRoom] == "L") maxOf(
+                    coin[curRoom],
+                    curCoin
+                ) else curCoin - coin[curRoom]
 
                 if (curRoom == n) {
                     if (remainCoin >= 0) {
                         println("Yes")
                         continue@loop
-                    } else{
+                    } else {
                         continue
                     }
                 }

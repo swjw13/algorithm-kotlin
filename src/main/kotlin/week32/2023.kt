@@ -23,10 +23,10 @@ private class Solution2023 {
             return
         }
 
-        for (i in 0 .. 9){
+        for (i in 0..9) {
             val tmp = prev + i
 
-            if (isPrime(tmp.toInt())){
+            if (isPrime(tmp.toInt())) {
                 backTracking(tmp)
             }
         }
@@ -42,6 +42,6 @@ private class Solution2023 {
     }
 }
 
-fun main(){
+fun main() {
     Solution2023().solution()
 }

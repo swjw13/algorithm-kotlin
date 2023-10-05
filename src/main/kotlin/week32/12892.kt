@@ -7,10 +7,10 @@ package week32
  */
 
 private class Solution12892 {
-    fun solution() = with(System.`in`.bufferedReader()){
+    fun solution() = with(System.`in`.bufferedReader()) {
         val (n, d) = readln().split(" ").map { it.toInt() }
         val lst = mutableListOf<List<Long>>()
-        for (i in 0 until n){
+        for (i in 0 until n) {
             lst.add(readln().split(" ").map { it.toLong() })
         }
 
@@ -23,11 +23,11 @@ private class Solution12892 {
         var low: Long = lst[0][0]
         var total: Long = lst[0][1]
 
-        while (highIdx < n){
-            if (high - low < d){
+        while (highIdx < n) {
+            if (high - low < d) {
                 result = maxOf(result, total)
                 highIdx += 1
-                if (highIdx < n){
+                if (highIdx < n) {
                     high = lst[highIdx][0]
                     total += lst[highIdx][1]
                 }
@@ -42,6 +42,6 @@ private class Solution12892 {
     }
 }
 
-fun main(){
+fun main() {
     Solution12892().solution()
 }

@@ -15,12 +15,12 @@ private class Solution8980 {
 
         for ((start, end, w) in buses) {
             var tmp = w
-            for (i in start until end){
+            for (i in start until end) {
                 tmp = minOf(tmp, c - weights[i])
             }
 
             answer += tmp
-            for (i in start until end){
+            for (i in start until end) {
                 weights[i] += tmp
             }
         }

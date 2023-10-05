@@ -11,7 +11,7 @@ private class Solution1027 {
 
     fun getMathParameter(x1: Int, y1: Int, x2: Int, y2: Int): List<Double> {
         if (y1 == y2) return listOf(0.0, y1.toDouble())
-        val a: Double =  (y2 - y1).toDouble() / (x2 - x1).toDouble()
+        val a: Double = (y2 - y1).toDouble() / (x2 - x1).toDouble()
         val b: Double = y1 - a * x1
 
         return listOf(a, b)

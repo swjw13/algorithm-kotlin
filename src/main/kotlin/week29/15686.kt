@@ -38,13 +38,16 @@ private class Solution15686 {
         }
 
         var answer = Int.MAX_VALUE
-        combination(0, chicken.size, c, 0){
+        combination(0, chicken.size, c, 0) {
             var tmp = 0
-            for (curHouse in houses){
+            for (curHouse in houses) {
                 var curChickenDistance = Int.MAX_VALUE
-                for (idx in pickedNum){
+                for (idx in pickedNum) {
                     val curChicken = chicken[idx]
-                    curChickenDistance = minOf(curChickenDistance, abs(curHouse.row - curChicken.row) + abs(curHouse.col - curChicken.col))
+                    curChickenDistance = minOf(
+                        curChickenDistance,
+                        abs(curHouse.row - curChicken.row) + abs(curHouse.col - curChicken.col)
+                    )
                 }
                 tmp += curChickenDistance
             }
