@@ -5,7 +5,7 @@ import kotlin.math.abs
 private object Solution17471 {
 
     private lateinit var visited: MutableList<Boolean>
-    private lateinit var peopleCnt: List<Int>
+    private lateinit var peopleCount: List<Int>
     private val stack = mutableListOf<Int>()
     private val connected: MutableMap<Int, List<Int>> = mutableMapOf()
     private var result = Int.MAX_VALUE
@@ -13,7 +13,7 @@ private object Solution17471 {
     fun solution() = with(System.`in`.bufferedReader()) {
         val n = readln().toInt()
         visited = MutableList(n + 1) { false }
-        peopleCnt = readln().split(" ").map(String::toInt)
+        peopleCount = readln().split(" ").map(String::toInt)
 
         for (i in 1..n) {
             val lst = readln().split(" ").map { it.toInt() }
@@ -71,8 +71,8 @@ private object Solution17471 {
             }
 
             if (smallVisited.all { it }) {
-                val total = peopleCnt.sum()
-                val groupA = peopleCnt.withIndex().filter {
+                val total = peopleCount.sum()
+                val groupA = peopleCount.withIndex().filter {
                     visited[it.index + 1]
                 }.sumOf { it.value }
 
