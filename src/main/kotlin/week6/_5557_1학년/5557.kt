@@ -1,9 +1,9 @@
 package week6._5557_1학년
 
-fun add(a: Int, b: Int): Int = a + b
-fun sub(a: Int, b: Int): Int = a - b
-
 fun main() = with(System.`in`.bufferedReader()) {
+    fun add(a: Int, b: Int): Int = a + b
+    fun sub(a: Int, b: Int): Int = a - b
+
     val n = readLine().toInt()
     val numbers = readLine().split(" ").map { it.toInt() }.toMutableList()
     val maths = listOf<(Int, Int) -> Int>(::add, ::sub)

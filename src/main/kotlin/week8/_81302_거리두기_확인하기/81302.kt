@@ -1,12 +1,11 @@
 package week8._81302_거리두기_확인하기
 
-data class Point(
-    val row: Int,
-    val col: Int,
-    val dist: Int
-)
-
-class Solution {
+private class Solution {
+    data class Point(
+        val row: Int,
+        val col: Int,
+        val dist: Int
+    )
 
     val dxy = listOf(Pair(-1, 0), Pair(1, 0), Pair(0, -1), Pair(0, 1))
 
